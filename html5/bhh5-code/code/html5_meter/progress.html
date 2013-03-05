@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh5 for more book information.
+-->
+<html lang="en-US">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Progress</title>
+    <script type="text/javascript" 
+       charset="utf-8"
+       src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
+    </script>
+  </head>
+  <body>
+    <section>
+     <h2>Task Progress</h2>
+     <p>Progress: 
+       <progress id="progressbar" max=100><span>0</span>%</progress>
+       
+     </p>
+     <script>
+      var progressBar = document.getElementById('p');
+      function updateProgress(newValue) {
+        progressBar.value = newValue;
+        progressBar.getElementsByTagName('span')[0].textContent = newValue;
+      }
+      
+      for (i=0;i<=100;i++){
+       $("h2").delay(5000).fadeIn();
+       updateProgress(i);
+      };
+      
+     </script>
+    </section>
+  </body>
+</html>

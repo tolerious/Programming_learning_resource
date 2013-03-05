@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh5 for more book information.
+-->
+<html lang="en-US">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Editing Profile</title>
+    <link href="style.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <form action="/users/1" method="post" accept-charset="utf-8">
+      <fieldset id="your_information">
+        <legend>Your Information</legend>
+        <ol>
+         <li>
+           <label for="name">Your Name</label>
+           <input type="text" name="name" value="" id="name">
+         </li>
+         <li>
+           <label for="city">City</label>
+           <input type="text" name="city" value="" id="city">
+         </li>
+         <li>
+           <label for="state">State</label>
+           <input type="text" name="state" value="" id="state">
+         </li>
+         <li>
+           <label for="postal_code">Postal Code</label>
+           <input type="text" name="postal_code" value="" id="postal_code">
+         </li>
+         <li>
+           <label for="email">Email</label>
+           <input type="email" name="email" value="" id="email">
+         </li>
+        </ol>
+        
+      </fieldset>
+      <p><input type="submit" value="Save"></p>
+    </form>
+ 
+  </body>
+</html>

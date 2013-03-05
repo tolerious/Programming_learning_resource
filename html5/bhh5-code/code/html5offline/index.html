@@ -1,0 +1,72 @@
+<!--
+ ! Excerpted from "HTML5 and CSS3",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh5 for more book information.
+-->
+<!doctype html>
+<html manifest="notes.manifest">
+
+  <head>
+    <title>AwesomeNotes</title>
+    
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    
+    <script type="text/javascript" 
+     src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">
+    </script>
+    
+    <script>
+
+     window.attachEvent("onload", function() {
+       CFInstall.check({
+         mode: "inline", // the default
+         node: "prompt"
+       });
+     });
+    </script>
+    <![endif]-->
+    
+    
+    
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" 
+      charset="utf-8" 
+      src="javascripts/jquery.min.js">
+    </script>
+    
+    <script type="text/javascript" 
+      charset="utf-8" src="javascripts/notes.js">
+    </script>
+    
+
+  </head>
+  <body>
+    <section id="sidebar">
+      <input type="button" id="new_button" value="New note">
+      <ul id="notes">
+      </ul>
+    </section>
+    
+    <section id="main">
+      <form>
+        <ol>
+          <li>
+            <input type="submit" id="save_button" value="Save">
+            <input type="submit" id="delete_button" value="Delete">
+          
+          </li>
+          <li><label for="title">Title</label><input type="text" id="title"></li>
+          <li><label for="note">Note</label><textarea id="note"></textarea></li>
+
+        
+        </ol>
+      </form>
+    </section>
+    
+
+  </body>
+</html>

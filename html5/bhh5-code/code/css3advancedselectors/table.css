@@ -1,0 +1,66 @@
+/*START:remove_default_styling*/
+table{
+  width: 600px; 
+  border-collapse: collapse; 
+} 
+
+th, td{ 
+  border: none;
+}
+/*END:remove_default_styling*/
+
+/*START:color_header */
+th{
+  background-color: #000; 
+  color: #fff;
+}
+/*END:color_header */
+
+/*START:table_stripe*/
+tr:nth-of-type(even){
+  background-color: #F3F3F3;
+}
+tr:nth-of-type(odd) {
+  background-color:#ddd;
+}
+/*END:table_stripe*/
+
+/*START:right-align */
+td:nth-child(n+2){
+  text-align: right;
+}
+/*END:right-align */
+
+/*START:bold-last-row */
+tr:last-child{
+  font-weight: bolder;
+}
+/*END:bold-last-row */
+
+/*START:bold-last-col */
+
+td:last-child{
+  font-weight: bolder;
+}
+/*END:bold-last-col */
+
+/* bold the total */
+
+/*START:bigtotal */
+tr:last-child td:last-child{
+  font-size:24px;
+}
+/*END:bigtotal */
+
+/*START:second_to_last_row */
+tr:nth-last-child(2){
+  color: green;
+}
+/*END:second_to_last_row */
+
+/*START:align_last_three_rows */
+tr:nth-last-child(-n+3) td{
+  text-align: right;
+}
+/*END:align_last_three_rows */
+

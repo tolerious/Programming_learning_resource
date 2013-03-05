@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh5 for more book information.
+-->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Simple Selection</title>
+  
+    <script type="text/javascript" 
+      charset="utf-8" 
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
+    </script>
+  
+  
+    <script type="text/javascript" charset="utf-8">
+      $(function(){
+        
+        var input = $("input");
+        var element = $("<p>Hello World</p>");
+        element.css("color", "#f00").insertAfter("#header");
+      });
+    </script>
+  
+  </head>
+  <body>
+    
+     <div id="header">
+       <h1>Heading</h1>
+     </div>
+    
+    
+  </body>
+</html>

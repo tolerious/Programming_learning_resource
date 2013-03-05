@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh5 for more book information.
+-->
+<html lang="en">
+  <head>
+    <title>AwesomeCo Newsletter</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <script 
+      charset="utf-8"
+      src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'
+      type='text/javascript'>
+    </script>
+    <style type="text/css" media="screen">
+    </style>
+    <script type="text/javascript">
+     $(function(){
+       $(".popup").click(function(event){
+         event.preventDefault();
+         var href = $(this).attr("href");
+         var width = $(this).attr("data-width");
+         var height = $(this).attr("data-height");
+         var popup = window.open (href,"popup",
+           "height=" + height +",width=" + width + "");          
+       });
+     });
+    </script>
+  </head>
+  <body>
+    <h1>Human Resources info</h1>
+      
+      <ul>
+        <li>
+          <a href="help/holiday_pay.html" 
+             data-width="600" 
+             data-height="400"
+             title="Holiday Pay"
+             class="popup">Holiday pay</a>
+           
+        </li>
+      </ul>
+  </body>

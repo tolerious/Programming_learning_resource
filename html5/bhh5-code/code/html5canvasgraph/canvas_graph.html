@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh5 for more book information.
+-->
+<html>
+  <head>
+    <title>Graph</title>
+    <script type="text/javascript" 
+      charset="utf-8" 
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
+    </script>
+    <script src="javascripts/RGraph.common.js" ></script>
+    <script src="javascripts/RGraph.bar.js" ></script>
+
+  </head>
+    <h2>Browser support</h2>
+    <canvas id="browsers" width="700" height="250"></canvas>
+    
+    <div id="graph_data">
+      <h1>Browser share for this site</h1>
+      <ul>
+        <li>
+          <p data-name="Safari 4" data-percent="15">
+            Safari 4 - 15%
+          </p>
+        </li>
+        <li>
+          <p data-name="Internet Explorer" data-percent="55">
+            Internet Explorer - 55%
+          </p>
+        </li>
+        <li>
+          <p data-name="Firefox" data-percent="14">
+            Firefox - 14%
+          </p>
+        </li>       
+        <li>
+          <p data-name="Google Chrome" data-percent="16">
+            Google Chrome - 16%
+          </p>
+        </li>        
+      </ul>
+    </div>
+
+    
+    <script>
+    $(function(){
+      function divGraph(barColor, textColor, width, spacer, lblHeight){
+        $('#graph_data ul').hide();
+        var container = $("#graph_data"); 
+        
+        container.css( { 
+          "display" : "block",  
+          "position" : "relative",
+          "height": "300px"}
+         );
+        
+        $("#graph_data>ul>li>p").each(function(i){  
+        
+          var bar = $("<div>" + $(this).attr("data-percent") + "%</div>");
+          var label = $("<div>" + $(this).attr("data-name") + "</div>");
+          
+          var commonCSS = {
+                       "width": width + "px",
+                       "position" : "absolute",
+                       "left" : i * (width + spacer) + "px"};
+                       
+          var barCSS = {
+                    "background-color" : barColor,
+                    "color" : textColor,
+                    "bottom" : lblHeight + "px",
+                    "height" :  $(this).attr("data-percent") + "%"
+          };
+          var labelCSS = {"bottom" : "0", "text-align" : "center"};
+          
+          bar.css( $.extend(barCSS, commonCSS) );
+          label.css( $.extend(labelCSS,commonCSS) );
+          
+          container.append(bar);
+          container.append(label);
+        });
+      }
+      
+      function canvasGraph(){
+        var title = $('#graph_data h1').text(); 
+        var labels = $("#graph_data>ul>li>p[data-name]").map(function(){  
+           return $(this).attr("data-name");
+        });
+        var percents = $("#graph_data>ul>li>p[data-percent]").map(function(){ 
+           return parseInt($(this).attr("data-percent"));
+        });
+        var bar = new RGraph.Bar('browsers', percents);
+        bar.Set('chart.gutter', 50);
+        bar.Set('chart.colors', ['red']);
+        bar.Set('chart.title', title);
+        bar.Set('chart.labels', labels);
+        bar.Draw();
+        
+      }
+
+      var canvas = document.getElementById('browsers');
+      if (canvas.getContext){
+        $('#graph_data').hide();
+        canvasGraph();
+      }
+      else{
+        divGraph("#f00", "#fff", 140, 10, 20);
+      }
+      
+    });
+    
+    </script>
+    

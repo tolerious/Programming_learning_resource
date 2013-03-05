@@ -1,0 +1,25 @@
+-@total = 0
+%table
+  %tr
+    %th Item
+    %th Price
+    %th Quantity
+    %th Total
+  -[["Coffee mug", 10, 5], ["Polo shirt", 20, 5], ["Red stapler", 9,4]].each do |item|
+    %tr
+      %td=item[0]
+      %td="$#{item[1]}.00"
+      %td=item[2]
+      %td="$#{item[1] * item[2]}.00"
+      -@total += (item[1] * item[2])  
+  %tr
+    %td{:colspan=>"3"}Subtotal
+    %td="$#{@total}.00"
+  %tr
+    %td{:colspan=>"3"}Shipping
+    %td="$12.00"
+  %tr
+    %td{:colspan=>"3"}Total Due
+    %td="$#{12 + @total}.00"
+    
+    

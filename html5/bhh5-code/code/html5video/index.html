@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh5 for more book information.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Video</title>
+
+  </head>
+  
+  <body>
+    <header>
+      <h1>Photoshop Tricks</h1>
+    </header>
+    
+    <section id="videos">
+            
+      <article>
+        <header>
+          <h2>Saturate with Blur</h2>
+        </header>
+        <video controls>
+          <source src="video/h264/01_blur.mp4" />
+          <source src="video/theora/01_blur.ogv"/>
+          <source src="video/webm/01_blur.webm" />
+          
+          <object width="640" height="480" type="application/x-shockwave-flash"
+             data="swf/flowplayer-3.2.2.swf">
+             <param name="movie" value="swf/flowplayer-3.2.2.swf" />
+             <param name="allowfullscreen" value="true" />
+             <param name="flashvars" 
+               value='config={"clip":{"url":"../video/h264/01_blur.mp4",
+                                      "autoPlay":false,
+                                      "autoBuffering":true
+                                     }
+                              }' />
+             <img src="video/thumbs/01_blur.png" 
+               width="640" height="264" alt="Poster Image"
+               title="No video playback capabilities." />
+           </object>
+           
+          <p>Your browser does not support the video tag.</p>
+        </video>
+        
+        <section class="downloads">
+          <header>
+            <h3>Downloads</h3>
+          </header>
+          <ul>
+            <li><a href="video/h264/01_blur.mp4">H264, playable on most platforms</a></li>
+            <li><a href="video/theora/01_blur.ogv">OGG format</a></li>
+            <li><a href="video/webm/01_blur.webm">WebM format</a></li>
+          </ul>
+        </section>
+        <section class="transcript">
+          <h2>Transcript</h2>
+          <p>We'll drag the existing layer to the new button on the bottom of 
+            the Layers palette to create a new copy.</p>
+          <p>Next we'll go to the Filter menu and choose "Gaussian Blur". 
+            We'll change the blur amount just enough so that we lose a little 
+            bit of the detail of the image.</p>
+          <p>Now we'll double-click on the layer to edit the layer and 
+            change the blending mode to "Overlay". We can then adjust the 
+            amount of the effect by changing the opacity slider.</p>
+          <p>Now we have a slightly enhanced image.</p>
+        </section>
+        
+      </article>
+      
+      
+      <article>
+        <header><h2>Adjustment Layers</h2></header>
+        <video controls>
+          <source src="video/h264/02_adjust.mp4" />
+          <source src="video/theora/02_adjust.ogv" />
+          <source src="video/webm/02_adjust.webm" />
+          <object width="640" height="480" type="application/x-shockwave-flash"
+            data="swf/flowplayer-3.2.2.swf">
+            <param name="movie" value="swf/flowplayer-3.2.2.swf" />
+            <param name="allowfullscreen" value="true" />
+            <param name="flashvars" 
+              value='config={"clip":{"url":"../video/h264/02_adjust.mp4","autoPlay":false,"autoBuffering":true}}' />
+            <!-- Image Fallback -->
+            <img src="video/thumbs/02_adjust.png" 
+              width="640" height="264" alt="Poster Image"
+              title="No video playback capabilities." />
+           </object>
+          <p>Your browser does not support the video tag.</p>
+        </video>
+        <section class="downloads">
+          <header>
+            <h3>Downloads</h3>
+          </header>
+          <ul>
+            <li>
+              <a href="video/h264/02_adjust.mp4">
+                H264, playable on most platforms
+              </a>
+            </li>
+            <li><a href="theora/h264/02_adjust.ogv">OGG format</a></li>
+            <li><a href="video/webm/02_adjust.webm">WebM format</a></li>
+          </ul>
+        </section>
+        
+        <section class="transcript">
+          <h2>Transcript</h2>
+          
+          <p>Many people who use Photoshop tend to make adjustments by going to the Image -> Adjustment menu and choosing things like Levels which you use to change the lighting of the image. Adjusting points on the graph change the lighting.</p>
+                 <p>The problem with this approach is that this adjustment is now applied to the image, so when we go to adjust things like the exposure of the image, which we can do from the same menu, then the changes we make to the exposure are being made on the image we have already adjusted.</p>
+                 <p>There's a better way to to this, by using Adjustment Layers. </p>
+                 <p>We'll revert this image, and then we'll make a new adjustment layer for the Levels. This interface looks exactly the same as the previous.</p>
+                 <p>We adjust the points on the graph and see the changes to the image in real-time.</p>
+                 <p>Then we can add another layer for the exposure. When we make changes, they're applied independently to the image.</p>
+                 <p>We can always come back and adjust these at any time, and we can toggle them on and off when we don't need them. This is a great way to adjust images non-destructively.</p>
+                <p> </p>
+          
+          
+        </section>
+      </article>
+    
+    </section>
+
+    
+  </body>
+</html>
+

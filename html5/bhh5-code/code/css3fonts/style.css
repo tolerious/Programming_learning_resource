@@ -1,0 +1,91 @@
+
+body{
+  width:960px;
+  margin:15px auto;
+}
+
+p{
+  margin:0 0 20px 0;
+}
+
+p, li{
+  line-height:20px;
+}
+
+/*START:type_style */
+body{
+  font-family: "GarogierRegular"; 
+  /*END:type_style */
+  /*START:type_style_fallback */
+  font-family: "GarogierRegular", Georgia,
+               "Palatino", "Palatino Linotype",
+               "Times", "Times New Roman", serif;
+  /*END:type_style_fallback */
+  
+  /*START:type_style */
+}
+
+/*END:type_style */
+
+/*START:header_style */
+header#page_header{
+  width:100%;
+}
+/*END:header_style */
+
+/*START:nav_style */
+header#page_header nav ul, footer#page_footer nav ul{
+  list-style: none;
+  margin: 0; 
+  padding: 0;
+}
+header#page_header nav ul li, footer#page_footer nav ul li{
+  padding:0;
+  margin: 0 20px 0 0;
+  display: inline;
+}
+/*END:nav_style */
+
+/*START:posts_style */
+section#posts{
+  float: left;
+  width: 74%;
+}
+
+section#posts aside{
+  float: right;
+  width: 35%;
+  margin-left: 5%;
+  font-size: 20px;
+  line-height: 40px;
+}
+/*END:posts_style */
+
+/*START:sidebar_style */
+section#sidebar{
+  float: left;
+  width: 25%;
+}
+/*END:sidebar_style */
+
+/*START:footer_style */
+footer#page_footer{
+  clear: both;
+  width: 100%; 
+  display: block; 
+  text-align: center;
+}
+/*END:footer_style */
+
+/*START:font */
+
+@font-face {
+  font-family: 'GarogierRegular';
+  src: url('fonts/Garogier_unhinted-webfont.eot');
+  src: url('fonts/Garogier_unhinted-webfont.woff') format('woff'),
+       url('fonts/Garogier_unhinted-webfont.ttf') format('truetype'),
+       url('fonts/Garogier_unhinted-webfont.svg#webfontew0qE0O9') format('svg');
+  font-weight: normal;
+}
+
+/*END:font */

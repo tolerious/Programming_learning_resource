@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh5 for more book information.
+-->
+<html lang='en'>
+  <head>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <title>AwesomeCo Logo Test</title>
+    <script type="text/javascript" 
+            charset="utf-8" 
+            src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
+    </script>
+    <!--[if lte IE 8]>
+    <script src="javascripts/excanvas.js"></script>
+    <![endif]-->
+    
+    
+  </head>
+  <body>
+    <canvas id="logo" width="900" height="80">
+      <h1>AwesomeCo</h1>
+    </canvas>
+    
+    <script>
+      var drawLogo = function(){
+        var canvas = document.getElementById('logo');
+        var context = canvas.getContext('2d');
+        
+        // context.fillStyle = "#f00";
+        // context.strokeStyle = "#f00";
+        var gradient = context.createLinearGradient(0, 0, 0, 40);
+        gradient.addColorStop(0,   '#a00'); // red
+        gradient.addColorStop(1,   '#f00'); // red
+        context.fillStyle = gradient;
+        context.strokeStyle = gradient;
+      
+        context.font = 'italic 40px "sans-serif"';
+        context.textBaseline = 'top';
+        context.fillText('AwesomeCo', 60, 0);
+      
+         context.lineWidth = 2;
+         context.beginPath();
+         context.moveTo(0, 40); 
+         context.lineTo(30, 0);
+         context.lineTo(60, 40 );
+         context.lineTo(285, 40 );
+         context.stroke();
+         context.closePath();
+              
+         context.save();
+         context.translate(20,20);
+         context.fillRect(0,0,20,20);
+         
+         
+         context.fillStyle    = '#fff';
+         context.strokeStyle = '#fff';
+                  
+         
+         context.lineWidth = 2;
+         context.beginPath();
+         context.moveTo(0, 20); 
+         context.lineTo(10, 0);
+         context.lineTo(20, 20 );
+         context.lineTo(0, 20 );
+         context.fill();
+         context.closePath();
+         context.restore();
+         
+        
+     };
+     //END setup
+     
+     $(function(){
+       var canvas = document.getElementById('logo');
+       if (canvas.getContext){
+         drawLogo();
+       }
+     });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh5 for more book information.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Video</title>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' type='text/javascript'></script>
+
+  </head>
+  <body>
+    <video controls>
+      <source src="video/h264/01_blur.mp4">
+      <source src="video/theora/01_blur.ogv">
+      <source src="video/webm/01_blur.webm">
+    </video>
+    
+    <div id="time">
+      00:00:00
+    </div>
+    
+    <script type="text/javascript">
+    var video = $("video");
+    video.bind("timeupdate", function(){
+      $("#time").html( this.currentTime );
+    });    
+    
+    var button = $("<input type='button' value='Play'>");
+    button.insertAfter(video);
+
+    </script>
+  </body>
+</html>

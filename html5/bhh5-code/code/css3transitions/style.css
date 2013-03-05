@@ -1,0 +1,26 @@
+/*START:buttontransition */
+/*START:button */​
+a.button{
+  padding: 10px;
+  border: 1px solid #000;
+  text-decoration: none;
+  /*END:button */​
+  /*START_HIGHLIGHTING */
+  -webkit-transition-property: background-color, color; /*<label id="code.apply" /> */
+  -webkit-transition-duration: 1s;  /*<label id="code.trans" /> */
+  -webkit-transition-timing-function: ease-out; /*<label id="code.transtype" /> */
+  /*END_HIGHLIGHTING */
+  /*START:button */​
+}
+/*END:button */​
+/*END:buttontransition */
+
+/*START:buttontransition */
+/*START:button */​
+
+a.button:hover{
+ background-color: #bbb;
+ color: #fff
+}
+/*END:button */​
+/*END:buttontransition */

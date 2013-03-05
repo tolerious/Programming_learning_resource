@@ -1,0 +1,6 @@
+ul{
+  list-style: none;
+}
+
+ul h2, ul p{margin: 0;}
+ul li{margin-bottom: 20px;}

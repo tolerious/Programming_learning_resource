@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh5 for more book information.
+-->
+<html lang="en-US">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Preferences</title>    
+    <script type="text/javascript" 
+      charset="utf-8" 
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
+    </script>
+
+    <script type="text/javascript" charset="utf-8">
+      $(function(){
+        if (!window.localStorage){
+          function createCookie(name,value,days) {
+            if (days) {
+              var date = new Date();
+              date.setTime(date.getTime()+(days*24*60*60*1000));
+              var expires = "; expires="+date.toGMTString();
+            }
+            else var expires = "";
+            document.cookie = name+"="+value+expires+"; path=/";
+          }
+          function readCookie(name) {
+            var result = ""
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+              var c = ca[i];
+              while (c.charAt(0)==' ') c = c.substring(1,c.length);
+              if (c.indexOf(nameEQ) == 0){
+                 result = c.substring(nameEQ.length,c.length);
+              }else{
+                result = "";
+              }
+           }            
+            return(result);
+          }
+          localStorage = (function () {
+            return {
+              setItem: function (key, value) {
+                createCookie(key, value, 3000) 
+              },
+              getItem: function (key) {
+                return(readCookie(key));
+              }
+            };
+          })();
+        }
+        
+        load_settings();
+        
+        $('form#preferences').submit(function(event){
+          event.preventDefault();
+          save_settings();
+        });
+      });
+      
+      function save_settings(){
+        localStorage.setItem("background_color", $("#background_color").val());
+        localStorage.setItem("text_color", $("#text_color").val());
+        localStorage.setItem("text_size", $("#text_size").val());
+        apply_preferences_to_page();
+      }
+      
+      function apply_preferences_to_page(){
+        $("body").css("backgroundColor", $("#background_color").val());
+        $("body").css("color", $("#text_color").val());
+        $("body").css("fontSize", $("#text_size").val() + "px");
+      }
+      
+      function load_settings(){
+        var bgcolor = localStorage.getItem("background_color");
+        var text_color = localStorage.getItem("text_color");
+        var text_size = localStorage.getItem("text_size");
+        
+        $("#background_color").val(bgcolor);
+        $("#text_color").val(text_color);
+        $("#text_size").val(text_size);
+        
+        apply_preferences_to_page();
+      }
+      
+    </script>
+  </head>
+  <body>
+    <p><strong>Preferences</strong></p>
+    <form id="preferences" action="save_prefs" 
+          method="post" accept-charset="utf-8">
+      <fieldset id="colors" class="">
+        <legend>Colors</legend>
+        <ol>
+          <li>
+            <label for="background_color">Background color</label>
+            <input type="color" name="background_color"
+                   value="" id="background_color">
+          </li>
+          <li>
+            <label for="text_color">Text color</label>
+            <input type="color" name="text_color" 
+                   value="" id="text_color">
+          </li>
+          <li>
+            <label for="text_size">Text size</label>
+            <select name="text_size" id="text_size">
+              <option value="16">16px</option>
+              <option value="20">20px</option>
+              <option value="24">24px</option>
+              <option value="32">32px</option>
+            </select>
+        </ol>
+        
+      </fieldset>
+      
+      <input type="submit" value="Save changes">
+    </form>
+  
+  </body>
+</html>
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh5 for more book information.
+-->
+<html lang="en-US">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Forms</title>
+    <script type="text/javascript" 
+       charset="utf-8"
+       src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
+    </script>
+    <style type="text/css" media="screen">
+      ul{list-style:none;}
+      
+      li{clear:both;}
+      
+      li>b, li>span{ 
+        display: block;
+        float: left;
+        width: 100px;
+      }
+      
+      li>span{
+        width:500px;
+        margin-left: 20px;
+      }
+      
+      li>span[contenteditable=true]:hover{ 
+        background-color: #ffc;
+      }
+      
+      li>span[contenteditable=true]:focus{ 
+        background-color: #ffa;
+        border: 1px shaded #000;
+      }
+    </style>
+  </head>
+  <body id="forms">
+    <h1>User information</h1>
+    <section id="edit_profile_link">
+      <p><a href="edit.html">Edit Your Profile</a></p>
+    </section>
+    <div id="status"></div>
+    <ul>
+      <li>
+        <b>Name</b>
+        <span id="name" contenteditable="true">Hugh Mann</span>
+      </li>
+      <li>
+        <b>City</b>
+        <span id="city" contenteditable="true">Anytown</span>
+      </li>
+      <li>
+        <b>State</b>
+        <span id="state" contenteditable="true">OH</span>
+      </li>
+      <li>
+        <b>Postal Code</b>
+        <span id="postal_code" contenteditable="true">92110</span>
+        </li>
+      <li>
+        <b>Email</b>
+        <span id="email" contenteditable="true">boss@awesomecompany.com</span>
+      </li>
+    </ul>
+
+    <script type="text/javascript">
+    
+      $(function(){
+        if(document.getElementById("edit_profile_link").contentEditable != null){
+          $("#edit_profile_link").hide();
+          var status = $("#status");
+          $("span[contenteditable=true]").blur(function(){
+            var field = $(this).attr("id");
+            var value = $(this).text();  
+            $.post("http://localhost:4567/users/1",
+               field + "=" + value,
+               function(data){
+                 status.text(data);
+               }
+            );
+          });
+        }
+      });
+      
+    </script>
+    
+    
+    
+  </body>
+</html>

@@ -1,0 +1,98 @@
+body{padding: 40px;}
+
+/* START:BASIC */
+#conference{
+  background-color: #000; 
+  width: 960px;
+  float:left;
+  background-image: url('images/awesomeconf.jpg');
+  background-position: center;
+  height: 240px;
+}
+
+
+#badge{
+  text-align: center;
+  width: 200px;
+  border: 2px solid blue;
+}
+
+#info{
+  margin: 20px;
+  padding: 20px;
+  width: 660px;
+  height: 160px;
+}
+
+
+#badge, #info{
+   float: left;
+   background-color: #fff; 
+}
+
+
+#badge h2{
+  margin: 0;
+  color: red; 
+  font-size: 40px;
+}
+
+#badge h3{
+  margin: 0;
+  background-color: blue;
+  color: #fff;
+}
+/* END:BASIC */
+
+
+/*START:gradient */        
+#badge{
+  background-image: -moz-linear-gradient(
+    top, #fff, #efefef
+  );
+  
+  background-image: -webkit-gradient(
+     linear,left top, left bottom,
+     color-stop(0, #fff),
+     color-stop(1, #efefef)
+  );
+  
+  background-image: linear-gradient(
+    top, #fff, #efefef
+  );
+}
+/*END:gradient */
+
+/*START:shadow */
+#badge{
+  -moz-box-shadow: 5px 5px 5px #333;
+  -webkit-box-shadow: 5px 5px 5px #333;
+  -o-box-shadow: 5px 5px 5px #333;
+  box-shadow: 5px 5px 5px #333;
+}
+/*END:shadow */
+
+/*START:rotate */
+#badge{
+  -moz-transform: rotate(-7.5deg);  
+  -o-transform: rotate(-7.5deg);  
+  -webkit-transform: rotate(-7.5deg);  
+  -ms-transform: rotate(-7.5deg);
+  transform: rotate(-7.5deg);
+}
+/*END:rotate */
+
+/*START:transparent */
+#info{
+  background-color: rgba(255,255,255,0.95); 
+}
+/*END:transparent */
+
+/*START:round */
+#info{
+  moz-border-radius: 12px;
+  webkit-border-radius: 12px;
+  o-border-radius: 12px;
+  border-radius: 12px;
+}
+/*END:round */

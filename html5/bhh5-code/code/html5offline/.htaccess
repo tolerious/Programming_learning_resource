@@ -1,0 +1,8 @@
+#START:manifest
+AddType text/cache-manifest .manifest
+#END:manifest
+
+#START:devnocache
+ExpiresActive On
+ExpiresDefault "access"
+#END:devnocache

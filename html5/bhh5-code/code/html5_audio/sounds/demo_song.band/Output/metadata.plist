@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com_apple_garageband_metadata_albumName</key>
+	<string>Brian Hogan's Album</string>
+	<key>com_apple_garageband_metadata_artistName</key>
+	<string>Brian Hogan</string>
+	<key>com_apple_garageband_metadata_composer</key>
+	<string>Brian Hogan</string>
+	<key>com_apple_garageband_metadata_mediaTrackType</key>
+	<string>Undefined</string>
+	<key>com_apple_garageband_metadata_numberOfArrangeTracks</key>
+	<integer>4</integer>
+	<key>com_apple_garageband_metadata_numberOfRITracks</key>
+	<integer>0</integer>
+	<key>com_apple_garageband_metadata_numberOfSITracks</key>
+	<integer>4</integer>
+	<key>com_apple_garageband_metadata_parentalAdvisory</key>
+	<string>None</string>
+	<key>com_apple_garageband_metadata_songDuration</key>
+	<real>20</real>
+	<key>com_apple_garageband_metadata_songGender</key>
+	<string>major</string>
+	<key>com_apple_garageband_metadata_songKey</key>
+	<string>C</string>
+	<key>com_apple_garageband_metadata_songSignatureDeNominator</key>
+	<integer>4</integer>
+	<key>com_apple_garageband_metadata_songSignatureNominator</key>
+	<integer>4</integer>
+	<key>com_apple_garageband_metadata_songTempo</key>
+	<integer>120</integer>
+	<key>com_apple_garageband_metadata_songTitle</key>
+	<string>My Song 5</string>
+	<key>com_apple_garageband_metadata_songVersionNumber</key>
+	<integer>5</integer>
+	<key>plistVersion</key>
+	<integer>1050</integer>
+</dict>
+</plist>

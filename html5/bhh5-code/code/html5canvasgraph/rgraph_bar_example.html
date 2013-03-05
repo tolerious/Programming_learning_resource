@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh5 for more book information.
+-->
+<html>
+  <head>
+    <title>Graph</title>
+    <script src="javascripts/RGraph.common.js" ></script>
+    <script src="javascripts/RGraph.bar.js" ></script>
+  </head>
+  <body>
+  <canvas width="500" height="250" id="test">[no canvas support]</canvas>
+  
+  <script type="text/javascript" charset="utf-8">
+    var bar = new RGraph.Bar('test', [50,25,15,10]);
+    bar.Set('chart.gutter', 50);
+    bar.Set('chart.colors', ['red']);
+    bar.Set('chart.title', "A bar graph of my favorite pies");
+    bar.Set('chart.labels', ["Banana Creme", "Pumpkin", "Apple", "Cherry"]);
+    bar.Draw();
+  </script>
+  
+  </body>
+</html>

@@ -1,0 +1,19 @@
+fieldset{
+  width: 216px;
+}
+
+fieldset ol{ 
+  list-style: none; 
+  padding:0; 
+  margin:2px; 
+}
+
+fieldset ol li{ 
+  margin:0 0 9px 0; 
+  padding:0; 
+}
+
+/* Make inputs go to their own line */
+fieldset input{
+  display:block;
+}

@@ -1,0 +1,16 @@
+ol{
+  padding :0;
+  margin: 0;
+  list-style: none;
+}
+
+ol li{
+  padding: 0;
+  clear: both;
+  margin: 0 0 10px 0;
+}
+
+label{
+  width: 150px;
+  float: left;
+}

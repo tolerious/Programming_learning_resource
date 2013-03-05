@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh5 for more book information.
+-->
+<html lang="en-US">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Meters</title>
+    <script type="text/javascript" 
+       charset="utf-8"
+       src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
+    </script>
+
+   <style type="text/css" media="screen">
+   
+    #pledge{
+      border: 1px solid #ddd;
+      padding: 10px;
+      width: 300px;
+      display: block;
+    }
+   
+    meter{
+      width: 280px;
+      display: block;
+      border: 1px solid #000;
+      position: relative;
+    }
+    .fill{
+      background-color: #999;
+      background-image: -webkit-gradient(
+          linear,
+          left bottom,
+          left top,
+          color-stop(0.37, rgb(14,242,30)),
+          color-stop(0.69, rgb(41,255,57))
+      );
+      
+      background-image: -moz-linear-gradient(
+          center bottom,
+          rgb(14,242,30) 37%,
+          rgb(41,255,57) 69%
+      );
+    }
+    .label{
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1000;
+    }
+    
+   </style>
+    
+    <script type="text/javascript" charset="utf-8">
+      // IE support
+      document.createElement("meter");
+      document.createElement("section");
+      document.createElement("header");
+      
+      $(function(){
+        var meter = $("#pledge_goal");
+        
+        var label = $("<span>" + meter.html() + "</span>"); 
+        label.addClass("label");
+
+        var fill = $("<div></div>"); 
+        fill.addClass("fill");
+        fill.css("width",(meter.attr("value") / meter.attr("max") * 100) + "%"); 
+        fill.append("<div style='clear:both;'><br></div>");
+      
+        meter.html(""); 
+        meter.append(fill);
+        meter.append(label);
+      });
+     </script>
+   </head>
+   <body>
+     
+     <section id="pledge">
+       <header>
+         <h3>Our Fundraising Goal</h3>  
+       </header>
+       <meter title="USD" id="pledge_goal" 
+              value="2500" min="0" max="5000">
+         $2500.00
+       </meter>
+       <p>Help us reach our goal of $5000!</p>
+     </section>
+     
+  </body>
+</html>

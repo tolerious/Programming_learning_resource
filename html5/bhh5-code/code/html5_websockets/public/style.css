@@ -1,0 +1,18 @@
+#chat_wrapper{
+  width: 320px;
+  height: 440px;
+  background-color: #ddd;
+  padding: 10px;
+}
+
+#chat_wrapper h2{
+  margin: 0;
+}
+
+#chat{
+  width: 300px; 
+  height: 300px; 
+  overflow: auto; /* <label id="code.overflow" /> */
+  background-color: #fff;
+  padding: 10px;
+}

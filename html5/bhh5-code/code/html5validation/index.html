@@ -1,0 +1,132 @@
+ <!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh5 for more book information.
+-->
+<html lang="en-US">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Project Information</title>
+    <script type="text/javascript"
+      charset="utf-8"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
+    </script>
+        <script type="text/javascript" src="modernizr-1.1.js"></script>
+        <script type="text/javascript" charset="utf-8" src="jquery.simpleColor.js"></script>
+        <script type="text/javascript">
+          $(function(){
+            
+            function hasColorSupport(){
+              input = document.createElement("input"); 
+              input.setAttribute("type", "color");
+              var hasColorType = (input.type !== "text");
+              // handle Safari/Chrome partial implementation
+              if(hasColorType){ 
+                var testString = "foo";  
+                input.value=testString; 
+                hasColorType = (input.value != testString);
+              }
+              return(hasColorType);
+            }
+             if (!hasColorSupport()){
+               $('input[type=color]').simpleColor();
+             }
+          });
+        </script>
+        
+        <script type="text/javascript" charset="utf-8" src="autofocus.js"></script>
+        
+    <style>
+    
+
+       ol{
+         padding :0;
+         margin: 0;
+         list-style: none;
+       }
+       
+       ol li{
+         padding: 0;
+         clear: both;
+         margin: 0 0 10px 0;
+       }
+       
+       label{
+         width: 150px;
+         float: left;
+       }
+       
+       .simpleColorContainer, .simpleColorDisplay{
+         float: left;
+       }
+      
+    </style>
+    
+  </head>
+  <body id="forms">
+    
+    <form method="post" action="/projects/1">
+      
+      <fieldset id="personal_information">
+        <legend>Project Information</legend>
+        <ol>
+          <li>
+            <label for="name">Name</label>
+            <input type="text" name="name" autofocus required id="name">
+          </li>
+          
+          <li>
+            <label for="priority">Priority</label>
+            <input type="range" min="0" max="10" name="priority" value="0" id="priority">
+          </li>
+          
+          <li>
+            <label for="estimated_hours">Estimated Hours</label>
+            <input type="number" name="estimated_hours"
+                   min="0" max="1000"
+                   id="estimated_hours">
+          </li>
+          
+          <li>
+            <label for="start_date">Start date</label>
+            <input type="date" name="start_date" id="start_date"
+                   value="2010-12-01">
+          </li>
+
+          <li>
+            <label for="email">Email contact</label>
+            <input type="email" name="email" id="email">
+          </li>
+          
+          <li>
+            <label for="url">Staging URL</label>
+            <input type="url" name="url" id="url">
+          </li>
+          
+          <li>
+            <label for="project_color">Project color</label>
+            <input type="color" name="project_color" id="project_color">
+          </li>
+          <li>
+            <label for="acctnumber">Account Number</label>
+            <input type="text" 
+                   name="acctnumber" id="acctnumber"
+                   required
+                   pattern="^[1-9]+[0-9]*$">
+            
+          </li>
+          <li>
+            <input type="submit" value="Submit">
+            
+          </li>
+        </ol>
+        
+      </fieldset>
+      
+    </form>
+  </body>
+</html>

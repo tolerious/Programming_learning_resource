@@ -1,0 +1,21 @@
+#images img{
+  -webkit-user-drag
+}
+
+#images{
+  float: left;
+  width: 240px;
+  margin-right: 10px;
+}
+
+#preview{
+  float: left;
+  width: 500px;
+  background-color: #ddd;
+  height: 335px;
+}
+
+.hover{
+  border: 10px solid #000;
+  background-color: #bbb !important;
+}

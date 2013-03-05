@@ -1,0 +1,50 @@
+<!--
+ ! Excerpted from "HTML5 and CSS3",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh5 for more book information.
+-->
+<!doctype html>
+<html>
+<head>
+	<title>My Chat Server</title>
+  <script 
+    src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' 
+    type='text/javascript'>
+  </script>
+  <script type="text/javascript" src="websocket_js/swfobject.js"></script>
+  <script type="text/javascript" src="websocket_js/FABridge.js"></script>
+  <script type="text/javascript" src="websocket_js/web_socket.js"></script>
+
+  <script src='chat.js' type='text/javascript'></script>
+  <link rel="stylesheet" href="style.css" media="screen">
+
+</head>
+<body>
+<div id="chat_wrapper">
+  <h2>AwesomeCo Help!</h2>
+  <form id="nick_form" action="#" method="post" accept-charset="utf-8">
+    <p>
+      <label>Nickname
+        <input id="nickname" type="text" value="GuestUser"/>
+      </label>
+      <input type="submit" value="Change">
+    </p>
+  </form>
+  
+  <div id="chat">connecting....</div>
+  
+  <form id="chat_form" action="#" method="post" accept-charset="utf-8">
+    <p>
+      <label>Message
+        <input id="message" type="text" />
+      </label>
+      <input type="submit" value="Send">
+    </p>
+  </form>
+</div>
+
+</body>
+</html>

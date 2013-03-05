@@ -1,0 +1,52 @@
+/*START:basic_styles */
+fieldset{
+  width: 216px;
+  border: none;
+  background-color: #ddd;
+}
+
+fieldset legend{ 
+  background-color: #ddd;
+  padding: 0 64px 0 2px;
+}
+
+fieldset>ol{list-style: none;
+  padding:0; 
+  margin: 2px;
+}
+fieldset>ol>li{
+  margin: 0 0 9px 0;
+  padding: 0;
+}
+
+/* Make inputs go to their own line */
+fieldset input{
+  display:block;
+}
+
+input{
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #bbb;
+ }
+ 
+ input[type="submit"]{
+   width: 202px;
+   padding: 0;
+   background-color: #bbb;
+ }
+ /*END:basic_styles */
+ 
+ /*START:css_round */
+ input, fieldset, legend{
+   /*START:standard */
+   border-radius: 5px;
+   /*END:standard */
+   /*START:mozilla */
+   -moz-border-radius: 5px;
+   /*END:mozilla */
+   /*START:webkit */
+   -webkit-border-radius: 5px;
+   /*END:webkit */
+ }
+ /*END:css_round */

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh5 for more book information.
+-->
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Project Information</title>
+    <script type="text/javascript"
+      charset="utf-8"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
+    </script>
+  </head>
+  <body>
+    
+    <p>
+<img id="map" alt="Map of AwesomeCo Service Center locations"
+src="http://maps.google.com/maps/api/staticmap?
+&amp;size=900x300
+&amp;sensor=false
+&amp;maptype=roadmap 
+&amp;markers=color:green|label:A|1+Davol+square,+Providence,+RI+02906-3810 
+&amp;markers=color:green|label:B|22+Southwest+3rd+Avenue,Portland,+OR
+&amp;markers=color:green|label:C|77+West+Wacker+Drive+Chicago+IL">
+      
+    </p>
+    <script type="text/javascript" charset="utf-8">
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) { 
+      	  showLocation(position.coords.latitude, position.coords.longitude);
+        }); 
+      }else{
+        var key = "your_key";
+        var script = "http://www.google.com/jsapi?key=" + key;
+        $.getScript(script, function(){
+          if ((typeof google == 'object') &&
+             google.loader && google.loader.ClientLocation) { 
+               showLocation(google.loader.ClientLocation.latitude, 
+                          google.loader.ClientLocation.longitude);
+           }else{
+             var message = $("<p>Couldn't find your address.</p>"); 
+             message.insertAfter("#map");
+           };
+        });        
+     };
+      
+      
+      var showLocation = function(lat, lng){
+        var fragment = "&markers=color:red|color:red|label:Y|" + lat + "," + lng;
+        var image = $("#map");      
+        var source = image.attr("src") + fragment;
+        source = source.replace("sensor=false", "sensor=true");
+        image.attr("src", source);
+      };
+      
+      
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,49 @@
+#form{
+  width: 400px;
+  float: left;
+}
+
+#contacts{
+  width: 200px;
+  float: left;
+}
+
+#contacts iframe{
+  border: none;
+  height: 400px;
+}
+
+fieldset{
+  width: 400px;
+  border: none;
+}
+
+fieldset legend{ 
+  background-color: #ddd;
+  padding: 0 64px 0 2px;
+}
+
+
+fieldset>ol{
+  list-style: none;
+  padding: 0; 
+  margin: 2px;
+}
+
+fieldset>ol>li{
+  margin: 0 0 9px 0;
+  padding: 0;
+}
+
+/* Make inputs go to their own line */
+fieldset input, fieldset textarea{
+  display:block;
+  width: 380px;
+}
+fieldset input[type=submit]{
+  width: 390px;
+}
+
+fieldset textarea{
+  height: 100px;
+}

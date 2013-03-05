@@ -1,0 +1,9 @@
+The images
+purple.jpg
+purple_thumb.jpg
+red.jpg
+red_thumb.jpg
+white.jpg
+white_thumb.jpg
+
+are copyright 2009 Brian P. Hogan, all rights reserved. You are permitted to use these images solely for the purpose of working through the examples in the book "HTML5 and CSS3". You may not reproduce or distribute these images for any reason.

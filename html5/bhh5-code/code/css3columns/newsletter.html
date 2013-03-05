@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh5 for more book information.
+-->
+<html lang="en">
+  <head>
+    <title>AwesomeCo Newsletter</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <style type="text/css" media="screen">
+      body{
+        line-height: 20px;
+      
+      }
+      p,h2,h3,h4,h5,h6{
+        margin: 0 0 20px 0;
+      }
+      
+      #newsletter, #header, #footer{
+        width: 960px;
+        margin: 0px auto;
+        display:block;
+      }
+      
+      #header{
+        text-align: center; 
+        border-bottom: 1px solid #ddccb5; 
+        margin-bottom: 20px;
+      }
+      
+      #footer{
+        text-align: center; 
+        border-top: 1px solid #ddccb5; 
+        margin-bottom: 20px;
+      }
+      
+      .callout{ 
+       width: 200px;
+       margin-left: 10px;
+       padding: 4px;
+       float: right;
+       border: 1px solid #ddccb5;
+      }
+      
+      .callout :last-child{
+        margin-bottom: 0;
+      }
+      
+      #newsletter{
+        column-count: 2;
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        -moz-column-gap: 20px;
+        column-gap: 20px;
+        -webkit-column-gap: 20px;
+        -moz-column-rule: 1px solid #ddccb5;
+        -webkit-column-rule: 1px solid #ddccb5;        
+        column-rule: 1px solid #ddccb5;        
+      }
+    </style>
+    
+    <script 
+      charset="utf-8"
+      src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' 
+      type='text/javascript'>
+    </script>
+    
+    <script 
+      charset="utf-8"
+      src="javascripts/autocolumn.js"
+      type='text/javascript'>
+    </script>
+    
+    <script type="text/javascript">
+      function hasColumnSupport(){
+        var element = document.documentElement;
+        var style = element.style;
+        if (style){
+          return typeof style.columnCount == "string" ||
+            typeof style.MozColumnCount == "string" ||
+            typeof style.WebkitColumnCount == "string" ||
+            typeof style.KhtmlColumnCount == "string";
+        }
+        return null;
+      }
+      
+      $(function(){
+        if(!hasColumnSupport()){
+         $("#newsletter").columnize({ columns: 2 }); 
+        }
+      });      
+    </script>
+    
+  </head>
+  <body>
+    <div id="header">
+      <h1>AwesomeCo Newsletter</h1>
+      <p>Volume 3, Issue 12</p>
+    </div>
+    <div id="newsletter">
+      <div id="director_news">
+        <div>
+          <h2>News From The Director</h2>
+        </div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <div class="callout">
+            <h4>Being Awesome</h4>
+            <p>
+              &quot;Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               Ut enim ad minim veniam.&quot;
+            </p>  
+          </div>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </div>    
+    
+      <div id="awesome_bits">
+        <div>
+          <h2>Quick Bits of Awesome</h2>
+        </div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+      
+      <div id="birthdays">
+        <div>
+          <h2>Birthdays</h2>
+        </div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+      
+      
+    </div>
+    <div id="footer">
+      <h6>Send newsworthy things to <a href="mailto:news@aweseomco.com">news@awesomeco.com</a>.</h6>
+    </div>
+    <!-- <script type='text/javascript' 
+           src='http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js'></script>
+   -->
+  </body>
+  
+</html>

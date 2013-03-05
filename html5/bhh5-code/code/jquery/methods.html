@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+ ! Excerpted from "HTML5 and CSS3",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/bhh5 for more book information.
+-->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Todo</title>
+  
+    <script type="text/javascript" 
+      charset="utf-8" 
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
+    </script>
+  
+  
+    <style type="text/css" media="screen">
+      .focused{
+        background-color: #ddd;
+      }
+    </style>
+    <script type="text/javascript">
+    $(function(){
+
+     $("label").css("color", "#f00");
+     
+       $("h1").css( {"color" : "red",
+                     "text-decoration" : "underline"}
+                  );
+     
+
+     $("input").focus(function(event){
+       $(this).addClass("focused");
+     });
+     
+     $("input").blur(function(event){
+       $(this).removeClass("focused");
+     });
+     
+    
+     $("#message").html("Hello World!");
+     
+     var wrapper = $("#message").wrap("<div class='wrapper'></div>").parent();
+     
+      $("#task_form").submit(function(event){
+        event.preventDefault();
+        var new_element = $("<li>" + $("#task").val() + "</li>");
+        $("#tasks").append(new_element);
+      });
+    });
+    </script>
+    
+  </head>
+  <body>
+    <h1>Todo List</h1>
+    <div id="message">
+    </div>
+    <form id="task_form">
+      <label for="task">Task</label>
+      <input type="text" id="task" >
+      <input type="submit" value="Add">
+    </form>
+    <ul id="tasks">
+    </ul>
+    
+  </body>
+</html>
