@@ -1,0 +1,8 @@
+egrep -v "\/\/beg|\/\/end" Basket.cc | \
+    sed "s/Basket.h/Basket2.h/" | \
+    sed "s/min_qty/quantity/" | \
+    sed "s/max_qty/quantity/" >V2_Basket.cc
+
+egrep -v "\/\/beg|\/\/end" Basket_main.cc | \
+    sed "s/Basket.h/Basket2.h/" >V2_Basket_main.cc
+

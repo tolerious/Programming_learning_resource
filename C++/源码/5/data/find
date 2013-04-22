@@ -1,0 +1,28 @@
+variable
+
+//begin{find_word}
+#include <string>
+int main()
+{
+	// initialize a string to hold a word to search for 
+	string search_word;
+	cin >> search_word;
+	
+	// initialize a bool variable to false 
+	bool found = false;
+	
+	string next_word;
+	while ( cin >> next_word ) {
+		if ( next_word == search_word )
+		found = true;
+	}
+	
+	//{ shorthand notation for: if ( found == true ) }
+	if ( found )
+		std::cout << "ok, we found the word" << std::endl;
+	else 
+		std::cout << "nope, the word was not present." << std::endl;
+
+	return 0;
+}
+//end{find_word}

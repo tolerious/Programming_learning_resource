@@ -1,0 +1,19 @@
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
+int main() 
+{
+    int i = 10;
+    int j = 20;
+
+    cout << "Before swap():\ti: "
+         << i << "\tj: " << j << endl;
+
+    swap(i, j);
+
+    cout << "After  swap():\ti: "
+         << i << "\tj: " << j << endl;
+    return 0;
+}
