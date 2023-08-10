@@ -6,4 +6,4 @@
 欢迎大家贡献自己的藏书，可提交 Pull Request.
 
 同时欢迎大家一起组队学习，博主坚信没有学不会的知识，没有掌握不了的知识点，一个人学习坚持不下去？那就一起组队来攻克吧！
-![Alt text](./wechat.png)
+<img src="https://github.com/tolerious/Programming_learning_resource/blob/master/wechat.png?raw=true" style="height:500px">
