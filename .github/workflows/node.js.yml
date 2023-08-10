@@ -1,0 +1,46 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Node.js CI
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.20.1]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - uses: pnpm/action-setup@v2
+        with:
+            version: 7
+      - run: pnpm install
+      - run: pnpm run docs:build
+      - name: Deploy 
+        uses: easingthemes/ssh-deploy@v2.1.5
+        env: 
+          #私钥
+            SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+            #SCp参数
+            ARGS: "-rltgoDzvO --delete"
+            #源目录
+            SOURCE: "./docs/build/English-Burning-Website-Dist"
+            #服务器Ip:换成你的服务器iP
+            REMOTE_HOST:  ${{ secrets.SERVER_IP_ADDRESS }}
+            #用户
+            REMOTE_USER: ${{ secrets.SERVER_USER }}
+            #目标地址
+            TARGET: "/var/www/html"
