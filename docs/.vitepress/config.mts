@@ -5,7 +5,7 @@ export default defineConfig({
   title: "CS Reading",
   description: "计算机书籍",
   srcDir: "./",
-  outDir: "./dist",
+  outDir: "./cs-reading",
   lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config

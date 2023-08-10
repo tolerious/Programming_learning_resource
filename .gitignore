@@ -4,3 +4,4 @@ lisp/.DS_Store
 .pnpm-store 
 node_modules
 docs/.vitepress/cache
+docs/cs-reading
