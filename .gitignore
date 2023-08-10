@@ -1,3 +1,6 @@
 *~
 .DS_Store
 lisp/.DS_Store
+.pnpm-store 
+node_modules
+docs/.vitepress/cache
