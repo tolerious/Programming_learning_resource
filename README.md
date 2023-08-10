@@ -1,5 +1,5 @@
 # CS Reading
-<img src="https://github.com/tolerious/Programming_learning_resource/blob/master/logo-color.png?raw=true" style="height:200px">
+<img src="https://github.com/tolerious/Programming_learning_resource/blob/master/logo-color.png?raw=true" style="width:400px">
 
 不知不觉，仓库已经存在多年，前段时间凑巧看到几篇博文的推荐，心想对仓库进行下整理，希望能够帮助到更多在求索之路上的，[欢迎访问](http://books.englishburning.com)。
 
