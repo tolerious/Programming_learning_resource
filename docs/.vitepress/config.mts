@@ -8,6 +8,7 @@ export default defineConfig({
   outDir: "./cs-reading",
   lastUpdated: true,
   themeConfig: {
+    logo:"/logo/png/logo-color.png",
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "首页", link: "/" },

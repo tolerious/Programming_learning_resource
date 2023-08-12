@@ -6,6 +6,9 @@ hero:
   name: "计算机书籍分享"
   text: "一个人孤单的学习？？不如抱团进步！！"
   tagline: 学无止境，向天问剑！
+  image:
+    src: '/logo/png/logo-color.png'
+    alt: ''
   actions:
     - theme: alt
       text: 组队学习
