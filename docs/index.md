@@ -15,7 +15,7 @@ hero:
       link: /group
     - theme: brand
       text: 下载书籍
-      link: http://b.englishburning.com/
+      link: http://s.csreading.cn
 
 features:
   - title: 一个人学不下去？
