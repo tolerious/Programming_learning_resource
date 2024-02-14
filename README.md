@@ -2,7 +2,7 @@
 [![Node.js CI](https://github.com/tolerious/Programming_learning_resource/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/tolerious/Programming_learning_resource/actions/workflows/node.js.yml)
 
 <img src="https://github.com/tolerious/Programming_learning_resource/blob/master/logo-color.png?raw=true" style="height:500px">
-![如果你觉得不错，欢迎赞赏](https://github.com/tolerious/Programming_learning_resource/blob/master/appreciation.jpg?raw=true)
+![Alt](https://github.com/tolerious/Programming_learning_resource/blob/master/appreciation.jpg?raw=true)
 
 不知不觉，仓库已经存在十多年，前段时间凑巧看到几篇博文的推荐，心想对仓库进行下整理，希望能够帮助到更多在求索之路上的伙伴，[欢迎访问获取图书](http://csreading.cn)。
 
