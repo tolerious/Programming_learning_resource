@@ -12,13 +12,13 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "首页", link: "/" },
-      { text: "组队学习", link: "/group" },
+      { text: "答疑解惑", link: "/group" },
     ],
 
     sidebar: [
       {
         text: "目录",
-        items: [{ text: "组队学习", link: "/group" }],
+        items: [{ text: "答疑解惑", link: "/group" }],
       },
     ],
     socialLinks: [
