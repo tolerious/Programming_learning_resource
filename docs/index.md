@@ -19,7 +19,7 @@ hero:
 
 features:
   - title: 我该怎么学？
-    details: 来这里就对了
+    details: 夯实基础，项目实战，公司历练，领域建树
   - title: 这里有什么？
     details: 这里有博主历年学习时收集的免费计算机书籍，让你的弹药库不再匮乏。
   - title: 然后呢？
