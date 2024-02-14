@@ -5,8 +5,8 @@
 
 不知不觉，仓库已经存在十多年，前段时间凑巧看到几篇博文的推荐，心想对仓库进行下整理，希望能够帮助到更多在求索之路上的伙伴，[欢迎访问](http://csreading.cn)。
 
-欢迎大家贡献自己的藏书，可提交 Pull Request.
+如果有想看的书，可以[提交Issue](https://github.com/tolerious/Programming_learning_resource/issues/new)
 
-同时欢迎大家一起组队学习，博主坚信没有学不会的知识，没有掌握不了的知识点，一个人学习坚持不下去？那就一起组队来攻克吧！
+也欢迎刚入行的计算机新人咨询问题。
 
 <img src="https://github.com/tolerious/Programming_learning_resource/blob/master/wechat.png?raw=true" style="height:500px">
