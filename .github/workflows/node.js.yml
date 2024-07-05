@@ -29,6 +29,7 @@ jobs:
             version: 8
       - run: pnpm install
       - run: pnpm run docs:build
+      - run: cp google* docs/
       - name: Deploy 
         uses: easingthemes/ssh-deploy@v2.1.5
         env: 
