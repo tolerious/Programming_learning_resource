@@ -45,7 +45,7 @@ jobs:
             #目标地址
             TARGET: "/var/www/html"
       - name: copy files
-        run: cp ../google* .
+        run: ls -alh
        
         
         
