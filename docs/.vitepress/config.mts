@@ -7,6 +7,17 @@ export default defineConfig({
   srcDir: "./",
   outDir: "./cs-reading",
   lastUpdated: true,
+  sitemap: {
+    hostname: "http://csreading.cn",
+    lastmodDateOnly: true,
+    transformItems: (items) => {
+      items.push({
+        url: "/",
+        changefreq: "daily",
+        priority: 0.9,
+      });
+    },
+  },
   themeConfig: {
     logo:"/logo/png/logo-color.png",
     // https://vitepress.dev/reference/default-theme-config
