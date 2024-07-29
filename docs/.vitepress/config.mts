@@ -41,7 +41,7 @@ export default defineConfig({
     footer: {
       message: "Powered by Toly with full 💖 ",
       copyright:
-        "<a style='color:rgb(255, 124, 10);font-weight:bold;' href='https://stylishreader.com/'>如何学习英语？</a>",
+        "<a style='color:rgb(255, 124, 10);font-weight:bold;' href='https://stylishreader.cn/'>如何学习英语？</a>",
     },
   },
 });
