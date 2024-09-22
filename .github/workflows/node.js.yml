@@ -31,6 +31,7 @@ jobs:
       - run: pnpm run docs:build
       - run: cp google* docs/cs-reading/
       - name: Deploy 
+        if: github.ref == 'refs/heads/master'
         uses: easingthemes/ssh-deploy@v2.1.5
         env: 
           #私钥
