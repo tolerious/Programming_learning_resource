@@ -6,7 +6,7 @@
 
 [英语学习请查看这里](https://stylishreader.com)
 
-您的扫码支持，我将倍感荣幸。
+<span  style="color: red;">您的扫码支持，我将倍感荣幸。</span>
 
 _如需在**赞助者列表**中显示您的个人链接，请在"赞助备注"中填写您的Github ID或联系方式_
 
