@@ -2,7 +2,7 @@
 
 [![Node.js CI](https://github.com/tolerious/Programming_learning_resource/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/tolerious/Programming_learning_resource/actions/workflows/node.js.yml)
 
-[欢迎访问网站](http://csreading.cn)下载书籍。
+[欢迎访问网站](http://book.frontend.fan/)下载书籍。
 
 [英语学习请查看这里](https://stylishreader.com)
 
